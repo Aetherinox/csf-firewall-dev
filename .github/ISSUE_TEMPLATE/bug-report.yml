@@ -129,6 +129,12 @@ body:
             required: true
 
     -
+        type: markdown
+        attributes:
+            value: |
+                  <br />
+
+    -
         type: textarea
         id: logs-lfd
         attributes:
@@ -137,6 +143,12 @@ body:
                 Copy the logs from `/var/log/lfd.log` in the box below.
         validations:
             required: true
+
+    -
+        type: markdown
+        attributes:
+            value: |
+                  <br />
 
     -
         type: textarea
