@@ -31,6 +31,12 @@ body:
             required: true
 
     -
+        type: markdown
+        attributes:
+            value: >
+                  <br />
+
+    -
         type: dropdown
         id: system-os
         attributes:
