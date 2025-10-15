@@ -42,6 +42,32 @@ body:
                   <br />
 
     -
+        type: dropdown
+        id: feature-category
+        attributes:
+            label: "Category"
+            description: |
+                What type of feature is this? <br />
+                If nothing matches, select **Other**.
+            options:
+                - "💡 Other"
+                - "📄 Blocklists / IPSETs"
+                - "⚙️ Control Panel / Integration"
+                - "🗔 Cosmetic / Web Interface"
+                - "📗 Documentation"
+                - "📀 Download.configserver"
+                - "🧱 Firewall / Security"
+                - "📦 Installation"
+        validations:
+            required: true
+
+    -
+        type: markdown
+        attributes:
+            value: |
+                  <br />
+
+    -
         type: textarea
         id: description
         attributes:
