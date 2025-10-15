@@ -24,7 +24,7 @@ body:
         attributes:
             label: "CSF Version"
             description: |
-                Current version of CSF being ran.
+                Current version of CSF being ran. <br />
                 The version is shown in the footer of the web interface. Or you can run `sudo csf -v` in Terminal.
             placeholder: "Ex: 15.03"
         validations:
