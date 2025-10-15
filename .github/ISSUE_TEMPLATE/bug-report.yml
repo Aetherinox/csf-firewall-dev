@@ -50,6 +50,12 @@ body:
             required: true
 
     -
+        type: markdown
+        attributes:
+            value: >
+                  <br />
+
+    -
         type: input
         id: system-distro
         attributes:
@@ -59,6 +65,12 @@ body:
                 e.g., `Ubuntu 22.04`, `CentOS 7.9`.
         validations:
             required: true
+
+    -
+        type: markdown
+        attributes:
+            value: >
+                  <br />
 
     -
         type: dropdown
@@ -77,6 +89,12 @@ body:
             required: true
 
     -
+        type: markdown
+        attributes:
+            value: >
+                  <br />
+
+    -
         type: textarea
         id: description
         attributes:
@@ -85,6 +103,12 @@ body:
                 Please provide a description of your issue here.
         validations:
             required: true
+
+    -
+        type: markdown
+        attributes:
+            value: >
+                  <br />
 
     -
         type: textarea
