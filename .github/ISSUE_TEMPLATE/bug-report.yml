@@ -33,7 +33,7 @@ body:
     -
         type: markdown
         attributes:
-            value: >
+            value: |
                   <br />
 
     -
@@ -52,7 +52,7 @@ body:
     -
         type: markdown
         attributes:
-            value: >
+            value: |
                   <br />
 
     -
@@ -69,7 +69,7 @@ body:
     -
         type: markdown
         attributes:
-            value: >
+            value: |
                   <br />
 
     -
@@ -91,7 +91,7 @@ body:
     -
         type: markdown
         attributes:
-            value: >
+            value: |
                   <br />
 
     -
@@ -107,7 +107,7 @@ body:
     -
         type: markdown
         attributes:
-            value: >
+            value: |
                   <br />
 
     -
