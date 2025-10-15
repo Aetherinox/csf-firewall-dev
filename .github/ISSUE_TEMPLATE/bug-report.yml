@@ -17,34 +17,10 @@ body:
                       `/var/log/lfd.log`
 
                   <br />
-    -
-        type: textarea
-        id: description
-        attributes:
-            label: "Description"
-            description: |
-                Please provide a description of your issue here.
-        validations:
-            required: true
 
     -
-        type: textarea
-        id: steps-reproduce
-        attributes:
-            label: "Steps To Reproduce"
-            description: |
-                Describe the steps that need taken by the developer to get the error / issue you're experiencing.
-            value: |
-                -
-                -
-                -
-                -
-        validations:
-            required: true
-
-    -
-        type: textarea
-        id: version
+        type: input
+        id: csf-version
         attributes:
             label: "CSF Version"
             description: |
@@ -91,5 +67,30 @@ body:
                 - "Normal"
                 - "High"
                 - "Urgent"
+        validations:
+            required: true
+
+    -
+        type: textarea
+        id: description
+        attributes:
+            label: "Description"
+            description: |
+                Please provide a description of your issue here.
+        validations:
+            required: true
+
+    -
+        type: textarea
+        id: steps-reproduce
+        attributes:
+            label: "Steps To Reproduce"
+            description: |
+                Describe the steps that need taken by the developer to get the error / issue you're experiencing.
+            value: |
+                -
+                -
+                -
+                -
         validations:
             required: true
