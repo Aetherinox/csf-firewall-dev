@@ -55,7 +55,7 @@ body:
             required: true
 
     -
-        type: input
+        type: dropdown
         id: system-os
         attributes:
             label: "System: OS"
