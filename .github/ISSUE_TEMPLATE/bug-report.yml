@@ -42,7 +42,7 @@ body:
         type: dropdown
         id: system-os
         attributes:
-            label: "System: OS"
+            label: "System › OS"
             description: |
                 Which OS are you running
             options:
@@ -61,7 +61,7 @@ body:
         type: input
         id: system-distro
         attributes:
-            label: "System: Distro / Version"
+            label: "System › Distro & Version"
             description: |
                 Specify your OS distribution and version.
                 e.g., `Ubuntu 22.04`, `CentOS 7.9`.
@@ -125,5 +125,26 @@ body:
                 -
                 -
                 -
+        validations:
+            required: true
+
+    -
+        type: textarea
+        id: logs-lfd
+        attributes:
+            label: "Logs › Lfd"
+            description: |
+                Copy the logs from `/var/log/lfd.log` in the box below.
+        validations:
+            required: true
+
+    -
+        type: textarea
+        id: config-csf
+        attributes:
+            label: "Config › csf.conf"
+            description: |
+                Copy the relevant settings from `/etc/csf/csf.conf` in the box below. <br />
+                You can also drag + drop your `csf.conf` to attach it.
         validations:
             required: true
