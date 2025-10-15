@@ -304,6 +304,9 @@ jobs:
                   echo -e "CSF Build ............. $version_build"
                   echo -e "Previous Tag .......... ${{ steps.task_tag_prev.outputs.tag }}"
 
+                  TAG_LAST=$(git describe --tags --abbrev=0)
+                  COMMIT_LAST=$(git rev-parse HEAD)
+
             # #
             #   Upload › Verbose › List Tree
             # #
@@ -840,7 +843,6 @@ jobs:
                   echo "‎"
                   echo " ${{ env.FILE_CSF_ZIP }} .................... ${{ env.SHA256SUM_CSF_ZIP }}"
                   echo " ${{ env.FILE_EXTRA_HELPERS }} ............... ${{ env.SHA256SUM_EXTRA_HELPERS }}"
-                  echo " ${{ env.FILE_EXTRA_DARK }} .................. ${{ env.SHA256SUM_EXTRA_DARK }}"
                   echo "‎"
                   echo "―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――"
                   echo "‎"
@@ -868,6 +870,7 @@ jobs:
             #       ${{ steps.changelog.outputs.changelog }}
             # #
 
+            # reeeee
             - name: '📝 Changelog › Pre Setup (Categorized Commits)'
               run: |
                   TAG_LAST=$(git describe --tags --abbrev=0)
@@ -897,7 +900,7 @@ jobs:
                   startsWith( env.SHOW_UNCATEGORIZED, false )
               with:
                   token: ${{ secrets.ADMINSERV_TOKEN }}
-                  #fromTag: "${{ env.TAG_LAST }}"
+                  fromTag: "${{ env.VERSION_TAG_PREV }}"
                   #toTag: "${{ github.ref }}"
                   configuration: ".github/changelog-configuration.json"
                   ignorePreReleases: false
@@ -933,7 +936,7 @@ jobs:
                   startsWith( env.SHOW_UNCATEGORIZED, true )
               with:
                   token: ${{ secrets.ADMINSERV_TOKEN }}
-                  #fromTag: "${{ env.TAG_LAST }}"
+                  fromTag: "${{ env.VERSION_TAG_PREV }}"
                   #toTag: "${{ github.ref }}"
                   configuration: ".github/changelog-configuration.json"
                   ignorePreReleases: false
