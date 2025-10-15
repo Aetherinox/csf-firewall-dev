@@ -1,5 +1,5 @@
 name: "\U0001F4A1 Feature Request"
-description: Got a suggestion?  Submit your request here.
+description: Have a suggestion?  Submit your request here.
 title: "\U0001F4A1 Feature: <title>"
 labels:
     - Type › Feature
@@ -12,6 +12,33 @@ body:
                 2.  Take a moment to check that your feature hasn't already been suggested.
                 3.  Be detailed, but to the point.
 
+                  <br />
+
+    -
+        type: dropdown
+        id: cp-name
+        attributes:
+            label: "Control Panel › Name"
+            description: |
+                Select the control panel associated with this feature request. <br />
+                If not, select **All**.
+            options:
+                - "All"
+                - "Generic"
+                - "cPanel"
+                - "CentOS Web Panel (CWP)"
+                - "Cyberpanel"
+                - "DirectAdmin"
+                - "InterWorx"
+                - "VestaCP"
+                - "Webmin"
+        validations:
+            required: true
+
+    -
+        type: markdown
+        attributes:
+            value: |
                   <br />
 
     -
