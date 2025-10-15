@@ -1,0 +1,137 @@
+name: "🐛 Bug Report"
+description: Found something you weren't expecting? Report it here!
+title: "🐛 Bug: <title>"
+labels: [
+    "Type ◦ Bug"
+]
+body:
+    - type: markdown
+      attributes:
+          value: |
+              1.  Please speak `English`.
+              2.  Make sure you are using the latest version and take a moment to check that your issue hasn't been reported before.
+              3.  It's really important to provide pertinent details and logs, incomplete details will be handled as an invalid report.
+              4.  Before creating this bug report, ensure you updated your applications to the latest versions.
+                  Check your `csf.conf` to ensure there are no typos or errors.
+              5.  To get detailed logs of the issue, open:
+                    `/var/log/lfd.log`
+
+              <br />
+
+  # #
+  #   Issue Description
+  # #
+
+  - type: textarea
+    id: description
+    attributes:
+        label: Description
+        description: |
+            Please provide a description of your issue here.
+    validations:
+        required: true
+
+  # #
+  #   Steps
+  # #
+
+  - type: textarea
+    id: steps-reproduce
+    attributes:
+        label: Steps To Reproduce
+        description: |
+            Describe the steps that need taken by the developer to get the error / issue you're experiencing.
+        value: |
+            -
+            -
+            -
+            -
+    validations:
+        required: true
+
+  # #
+  #   CSF › Version
+  # #
+
+  - type: input
+    id: version
+    attributes:
+        label: "CSF Version"
+        description: |
+            Current version of CSF being ran.
+            The version is shown in the footer of the web interface. Or you can run `sudo csf -v` in Terminal.
+        placeholder: "Ex: 15.03"
+    validations:
+        required: true
+
+  # #
+  #   System › OS
+  # #
+
+  - type: input
+    id: system-os
+    attributes:
+        label: System: OS
+        description: |
+            Which OS are you running
+        options:
+            - "Linux"
+            - "MacOSX"
+    validations:
+        required: true
+
+  # #
+  #   System › Distro
+  # #
+
+  - type: input
+    id: system-distro
+    attributes:
+        label: Distro / Version
+        description: |
+            Specify your OS distribution and version.
+            e.g., `Ubuntu 22.04`, `CentOS 7.9`.
+    validations:
+        required: true
+
+  # #
+  #   Priority
+  # #
+
+  - type: dropdown
+    id: priority-type
+    attributes:
+        label: Priority
+        description: |
+            How critical is the issue?
+            Do not abuse this. Issues that completely break the utility would be classified as critical
+        options:
+            - "Low"
+            - "Normal"
+            - "High"
+            - "Urgent"
+    validations:
+        required: true
+
+  # #
+  #   Logs › Lfd
+  # #
+
+  - type: textarea
+    id: logs-lfd
+    attributes:
+        label: Logs: /var/log/lfd.log
+        description: |
+            Copy / paste your logs from `/var/log/lfd.log`
+
+  # #
+  #   Screenshots
+  # #
+
+  - type: textarea
+    id: screenshots
+    attributes:
+        label: Screenshots
+        description: |
+            Please provide screenshots of any errors or the issue you're having.
+            Gifs are even better.
