@@ -17,3 +17,16 @@ body:
                     `/var/log/lfd.log`
 
               <br />
+
+  # #
+  #   Issue Description
+  # #
+
+  - type: textarea
+    id: description
+    attributes:
+        label: Description
+        description: |
+            Please provide a description of your issue here.
+    validations:
+        required: true
