@@ -77,6 +77,32 @@ body:
 
     -
         type: dropdown
+        id: control-panel
+        attributes:
+            label: "Install Type › Control Panel"
+            description: |
+                Select the control panel you are using with CSF. <br />
+                If not, select **Generic**.
+            options:
+                - "Generic"
+                - "cPanel"
+                - "CentOS Web Panel (CWP)"
+                - "Cyberpanel"
+                - "DirectAdmin"
+                - "InterWorx"
+                - "VestaCP"
+                - "Webmin"
+        validations:
+            required: true
+
+    -
+        type: markdown
+        attributes:
+            value: |
+                  <br />
+
+    -
+        type: dropdown
         id: priority-type
         attributes:
             label: "Priority"
