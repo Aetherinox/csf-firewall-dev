@@ -24,9 +24,9 @@ body:
         attributes:
             label: "CSF Version"
             description: |
-                Current version of CSF installed.
-                Version shown in footer of web interface.
-                Or un `sudo csf -v` in Terminal.
+                Current version of CSF installed.<br />
+                Version shown in footer of web interface.<br />
+                Or un `sudo csf -v` in Terminal.<br />
                 Or open `/etc/csf/version.txt`.
             placeholder: "Ex: 15.03"
         validations:
