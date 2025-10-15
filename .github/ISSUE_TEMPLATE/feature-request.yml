@@ -1,0 +1,47 @@
+name: "\U0001F4A1 Feature Request"
+description: Got a suggestion?  Submit your request here.
+title: "\U0001F4A1 Feature: <title>"
+labels:
+    - Type › Feature
+body:
+    -
+        type: markdown
+        attributes:
+            value: |
+                1.  Please speak `English`.
+                2.  Take a moment to check that your feature hasn't already been suggested.
+                3.  Be detailed, but to the point.
+
+                  <br />
+
+    -
+        type: textarea
+        id: description
+        attributes:
+            label: "Feature Description"
+            description: |
+                What feature would you like to request?
+            placeholder: |
+                I would like to request ...
+        validations:
+            required: true
+
+    -
+        type: markdown
+        attributes:
+            value: |
+                  <br />
+
+    -
+        type: textarea
+        id: screenshots
+        attributes:
+            label: "Screenshots"
+            description: |
+                If possible, provide screenshots. <br />
+                Want a feature placed in a specific location? Mark it in a screenshot. <br />
+                Want something modified? Try creating a mockup. <br />
+                The more details about how it should look, the better. <br />
+                Not required, but appreciated.
+        validations:
+            required: false

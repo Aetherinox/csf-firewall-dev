@@ -9,10 +9,9 @@ body:
         attributes:
             value: |
                 1.  Please speak `English`.
-                2.  Make sure you are using the latest version and take a moment to check that your issue hasn't been reported before.
-                3.  It's really important to provide pertinent details and logs, incomplete details will be handled as an invalid report.
-                4.  Before creating this bug report, ensure you updated your applications to the latest versions.
-                    Check your `csf.conf` to ensure there are no typos or errors.
+                2.  Provide pertinent details and logs, incomplete details will be handled as an invalid report.
+                3.  Before creating this report, ensure CSF is updated to the latest version.
+                4.  Check your `csf.conf` for typos or errors.
                 5.  To get detailed logs of the issue, open:
                         `/var/log/lfd.log`
 
@@ -127,8 +126,10 @@ body:
         attributes:
             label: "Priority"
             description: |
-                How critical is the issue?
-                Do not abuse this. Issues that completely break the utility would be classified as critical
+                How critical is the issue? Do not abuse this. <br />
+                Cosmetic bugs are **Low**. <br />
+                Bugs in minor features are **Normal**. <br />
+                Issues that break CSF integration or the firewall are **High** to **Urgent**.
             options:
                 - "Low"
                 - "Normal"
@@ -188,7 +189,7 @@ body:
             description: |
                 Copy the logs from `/var/log/lfd.log` in the box below.
         validations:
-            required: true
+            required: false
 
     -
         type: markdown
@@ -205,4 +206,20 @@ body:
                 Copy the relevant settings from `/etc/csf/csf.conf` in the box below. <br />
                 You can also drag + drop your `csf.conf` to attach it.
         validations:
-            required: true
+            required: false
+
+    -
+        type: markdown
+        attributes:
+            value: |
+                  <br />
+
+    -
+        type: textarea
+        id: screenshots
+        attributes:
+            label: "Screenshots"
+            description: |
+                Provide any relevant screenshots of your issue.
+        validations:
+            required: false
