@@ -26,3 +26,70 @@ body:
                 Please provide a description of your issue here.
         validations:
             required: true
+
+    -
+        type: textarea
+        id: steps-reproduce
+        attributes:
+            label: Steps To Reproduce
+            description: |
+                Describe the steps that need taken by the developer to get the error / issue you're experiencing.
+            value: |
+                -
+                -
+                -
+                -
+        validations:
+            required: true
+
+    -
+        type: textarea
+        id: version
+        attributes:
+            label: CSF Version
+            description: |
+                Current version of CSF being ran.
+                The version is shown in the footer of the web interface. Or you can run `sudo csf -v` in Terminal.
+            placeholder: "Ex: 15.03"
+        validations:
+            required: true
+
+    -
+        type: input
+        id: system-os
+        attributes:
+            label: System: OS
+            description: |
+                Which OS are you running
+            options:
+                - "Linux"
+                - "MacOSX"
+        validations:
+            required: true
+
+    -
+        type: input
+        id: system-distro
+        attributes:
+            label: System: Distro / Version
+            description: |
+                Specify your OS distribution and version.
+                e.g., `Ubuntu 22.04`, `CentOS 7.9`.
+        validations:
+            required: true
+
+    -
+        type: dropdown
+        id: priority-type
+        attributes:
+            label: Priority
+            description: |
+                How critical is the issue?
+                Do not abuse this. Issues that completely break the utility would be classified as critical
+            options:
+                - "Low"
+                - "Normal"
+                - "High"
+                - "Urgent"
+        validations:
+            required: true
