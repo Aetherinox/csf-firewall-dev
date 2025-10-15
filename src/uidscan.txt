@@ -1,6 +1,5 @@
 From: root
 To: root
-Subject: lfd on [hostname]: UID [uid] uid Tracking Hit
 
 Time:    [time]
 UID:     [uid]
