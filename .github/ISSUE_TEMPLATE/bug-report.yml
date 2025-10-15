@@ -22,13 +22,33 @@ body:
         type: input
         id: csf-version
         attributes:
-            label: "CSF Version"
+            label: "CSF › Version"
             description: |
                 Current version of CSF installed.<br />
                 Version shown in footer of web interface.<br />
                 Or un `sudo csf -v` in Terminal.<br />
                 Or open `/etc/csf/version.txt`.
             placeholder: "Ex: 15.03"
+        validations:
+            required: true
+
+    -
+        type: markdown
+        attributes:
+            value: |
+                  <br />
+
+    -
+        type: dropdown
+        id: csf-release
+        attributes:
+            label: "CSF › Release"
+            description: |
+                Most users will select **Stable**. <br />
+                Alpha releases are available by adding `RELEASE_ALPHA = "1"` to your `/etc/csf/csf.conf`
+            options:
+                - "Stable"
+                - "Alpha"
         validations:
             required: true
 
@@ -77,14 +97,14 @@ body:
 
     -
         type: dropdown
-        id: control-panel
+        id: cp-name
         attributes:
-            label: "Install Type › Control Panel"
+            label: "Control Panel › Name"
             description: |
                 Select the control panel you are using with CSF. <br />
                 If not, select **Generic**.
             options:
-                - "Generic"
+                - "Generic (None)"
                 - "cPanel"
                 - "CentOS Web Panel (CWP)"
                 - "Cyberpanel"
